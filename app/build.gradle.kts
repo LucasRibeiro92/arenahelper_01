@@ -47,13 +47,17 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.converter.gson)
+    implementation(libs.retrofit)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
     /*
+    *
     * Firebase
-     */
+    *
+    */
     // Import the Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
     // When using the BoM, don't specify versions in Firebase dependencies
@@ -61,40 +65,38 @@ dependencies {
     //Auth
     implementation("com.firebaseui:firebase-ui-auth:7.2.0")
 
-    //Lifecycle
     /*
-
-    * implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
-    * implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     *
-    * */
+    * Lifecycle
+    *
+    */
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
 
-    //Koin
     /*
-    * implementation("io.insert-koin:koin-core:3.2.2")
-    * implementation("io.insert-koin:koin-android:3.2.2")
     *
-    * */
+    * Koin
+    *
+    */
     implementation("io.insert-koin:koin-android:3.2.0")
     implementation("io.insert-koin:koin-android-compat:3.2.0")
     implementation("io.insert-koin:koin-androidx-compose:3.4.5")
 
-    //Room
     /*
     *
-    * implementation("androidx.room:room-runtime:2.3.0")
-    * kapt("androidx.room:room-compiler:2.3.0")
+    * Room
     *
-    * implementation("androidx.room:room-runtime:2.5.2")
-    * kapt("androidx.room:room-compiler:2.5.2")
-    * implementation("androidx.room:room-ktx:2.5.2")
-    * implementation("androidx.room:room-testing:2.5.2")
-    *
-     * */
+    */
     implementation("androidx.room:room-runtime:2.5.0")
     implementation("androidx.room:room-ktx:2.5.0")
     kapt("androidx.room:room-compiler:2.5.0")
     implementation("androidx.room:room-testing:2.5.1")
+
+    /*
+    *
+    * Glide
+    *
+    */
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    kapt("com.github.bumptech.glide:compiler:4.15.1")
 }
